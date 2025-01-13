@@ -1,0 +1,19 @@
+[versions]
+jackson = '2.14.2'
+
+spring-boot = '2.7.16'
+spring-dependency-management = '1.0.14.RELEASE'
+openrewrite = '7.0.0'
+
+[libraries]
+jackson-annotations = { module = 'com.fasterxml.jackson.core:jackson-annotations', version.ref = 'jackson' }
+jackson-core = { module = 'com.fasterxml.jackson.core:jackson-core', version.ref = 'jackson' }
+jackson-databind = { module = 'com.fasterxml.jackson.core:jackson-databind', version.ref = 'jackson' }
+
+[bundles]
+jackson = ['jackson-annotations', 'jackson-core', 'jackson-databind']
+
+[plugins]
+spring-boot = { id = 'org.springframework.boot', version.ref = 'spring-boot' }
+spring-boot-dependency-management = { id = 'io.spring.dependency-management', version.ref = 'spring-dependency-management' }
+openrewrite = { id = 'org.openrewrite.rewrite', version.ref = 'openrewrite' }
